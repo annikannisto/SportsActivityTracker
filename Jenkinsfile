@@ -14,7 +14,7 @@ pipeline {
                 script {
                     try {
                         // Run Maven build (use bat for Windows)
-                        bat 'mvn clean package'
+                        sh 'mvn clean package'
                     } catch (Exception e) {
                         echo "Build failed: ${e}"
                         throw e  // Stop the pipeline if the build fails
@@ -28,7 +28,7 @@ pipeline {
                 script {
                     try {
                         // Run unit tests (use bat for Windows)
-                        bat 'mvn test'
+                        sh 'mvn test'
                     } catch (Exception e) {
                         echo "Tests failed: ${e}"
                         throw e  // Stop the pipeline if tests fail
@@ -48,7 +48,7 @@ pipeline {
                 script {
                     try {
                         // Generate JaCoCo coverage report (use bat for Windows)
-                        bat 'mvn jacoco:report'
+                        sh 'mvn jacoco:report'
                     } catch (Exception e) {
                         echo "Code coverage report generation failed: ${e}"
                         throw e  // Stop the pipeline if JaCoCo report generation fails
