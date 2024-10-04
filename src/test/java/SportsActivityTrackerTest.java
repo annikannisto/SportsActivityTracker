@@ -5,13 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class SportsActivityLoggerTest {
-    private SportsActivityLogger logger;
+public class SportsActivityTrackerTest {
+    private SportsActivityTracker logger;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @BeforeEach
     public void setUp() {
-        logger = new SportsActivityLogger();
+        logger = new SportsActivityTracker();
         System.setOut(new PrintStream(outContent));  // Redirect system output to the output stream for testing
     }
 

@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class SportsActivityLogger {
+public class SportsActivityTracker {
     private final List<Activity> activities;
 
-    public SportsActivityLogger() {
+    public SportsActivityTracker() {
         this.activities = new ArrayList<>();
     }
 
@@ -57,7 +57,7 @@ public class SportsActivityLogger {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        SportsActivityLogger logger = new SportsActivityLogger();
+        SportsActivityTracker logger = new SportsActivityTracker();
         boolean running = true;
 
         while (running) {
