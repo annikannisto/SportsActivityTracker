@@ -139,4 +139,4 @@ mvn test
     ```
 
 ## Author
-- Gitta - (https://github.com/gitober)
+- Anni - (https://github.com/annikannisto)
